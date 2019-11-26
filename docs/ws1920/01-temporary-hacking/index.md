@@ -1,5 +1,13 @@
+[[Zurück zur Übersicht]](../index.md)
+
 # 1. Temporary Hacking: Memory Scanning
 In diesem Workshop werden wir zuerst mit einem sehr wichtigen und auch ziemlich einfachen Konzept beginnen: Memory Scanning! Es wird verwendet, um interessante Arbeitsspeicheradressen (zum Beispiel Lebens- oder Erfahrungspunkte) zu finden und zu manipulieren.
+
+## Inhalt
+In diesem Block behandeln wir:
+* Funktionsweise sowie Vor- und Nachteile des Memory-Scannings
+* Eine [beispielhafte Anwendung](01-example.md)
+* Darauf aufbauende [Übungen](02-excercises.md) (mit [Musterlösungen](03-walkthrough.md))
 
 ## Der Algorithmus
 Der Ablauf hierbei ist ziemlich einfach und kann als einfacher Algorithmus dargestellt werden:
@@ -25,4 +33,11 @@ end
 ## Vor- und Nachteile des Memory Scanning
 Ein großer Vorteil von Memory Scanning ist, dass es ein schnelles Verfahren ist, dass für die meisten Fälle in kurzer Zeit brauchbare Ergebnisse liefert. Es kann sogar komplett ausreichen, wenn man nur wenige einfache Werte ändern möchte, wie zum Beispiel Lebens- oder Erfahrungspunkte. Besonders in der ersten Phase des Gamehackings liefert es nützliche Hinweise darauf, wie Daten in Spielen organisiert werden und an welchen Stellen sich weiteres Nachschauen lohnen kann (dazu mehr in späteren Kapiteln).
 
-Memory Scanning ist aber kein Alleskönner, in manchen Fällen kann es auch überhaupt nicht eingesetzt werden: wenn die zu findenden Werte beispielsweise durch das Spiel schneller geändert werden als man nach ihnen scannen lassen kann. In anderen Fällen ist es schlichtweg unmöglich, die Menge der gefundenen Adressen auf eine überschaubare und handhabbare Anzahl zu reduzieren. Das bedeutet dann einen immensen Aufwand beim händischen Überprüfen der Adressen.
+Memory Scanning ist aber kein Alleskönner, in manchen Fällen kann es auch überhaupt nicht eingesetzt werden, beispielsweise wenn
+* die zu findenden Werte beispielsweise durch das Spiel schneller geändert werden als man nach ihnen scannen lassen kann.
+* die Werte von mehreren Systemen im Spiel geändert werden (zum Beispiel wird die Position des Spielers durch Benutzereingaben und Gravitation beeinflusst)
+* die Werte anders kodiert sind als sie angezeigt werden (zum Beispiel bei Umrechung von km/h zu mp/h)
+
+In anderen Fällen ist es schlichtweg unmöglich, die Menge der gefundenen Adressen auf eine überschaubare und handhabbare Anzahl zu reduzieren. Das bedeutet dann einen immensen Aufwand beim händischen Überprüfen der Adressen. Außerdem kann Memory Scanning sehr ressourcenintensiv sein: wenn viele Gigabyte Speicher gescannt und viele Adressen zwischengespeichert werden müssen, kann unter Anderem die Festplatte den gesamten Prozess ausbremsen.
+
+[[Weiter zum Beispiel]](01-example.md)
